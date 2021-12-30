@@ -2,7 +2,7 @@
 
 // ed3d34 BA0000
 $red: #BA0000;
-$black: #777;
+$black: #444;
 $white: #fff;
 $light-color: #666;
 $border: .2rem solid $black;
@@ -32,14 +32,14 @@ $border: .2rem solid $black;
 }
 
 @mixin titleText($titleSize) {
-    font: $titleSize;
+    font-size: $titleSize;
     color: $black;
     text-transform: capitalize;
 }
 
 
 @mixin graphText($graphSize) {
-    font: $graphSize;
+    font-size: $graphSize;
     color: $light-color;
     line-height: 2;
     padding: 1rem 0;
@@ -74,6 +74,29 @@ body {
     }
 }
 
+section {
+    padding: 5rem 9%;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 5rem;
+    padding: 1.2rem 3rem;
+    border: $border;
+    cursor: pointer;
+    background: none;
+    color: $black;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+
+    &:hover {
+        border-color: $red;
+        background-color: $red;
+        color: $white
+    }
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -89,7 +112,7 @@ body {
     }
 
     .logo {
-        font-size: 2.5rem;
+        font-size: 3rem;
         color: $white;
         font-weight: bolder;
     }
@@ -131,10 +154,20 @@ body {
 
     .credit {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: $white;
         margin-top: 3rem;
         line-height: 1.5;
+    }
+}
+
+.heading {
+    text-align: center;
+    @include titleText(3rem);
+    margin-bottom: 3rem;
+
+    span {
+        color: $red;
     }
 }
 
@@ -156,28 +189,6 @@ body {
         top: 1rem;
         left: 25rem
         ;
-    }
-}
-
-section {
-    padding: 5rem 9%;
-}
-
-.btn {
-    margin-top: 1rem;
-    display: inline-block;
-    border-radius: 5rem;
-    padding: 1.2rem 3rem;
-    border: $border;
-    cursor: pointer;
-    background: none;
-    color: $black;
-    font-size: 2rem;
-
-    &:hover {
-        border-color: $red;
-        background-color: $red;
-        color: $white
     }
 }
 
@@ -212,6 +223,41 @@ section {
         }
     }
 }
+
+.products {
+
+    .slide {
+        text-align: center;
+
+        img {
+            height: 25rem;
+            margin: 5rem 0;
+            transform: scale(.5);
+        }
+
+        h3 {
+            padding: 1rem 0;
+            @include titleText(2.5rem);
+            opacity: 0;
+        }
+
+        .btn {
+            opacity: 0;
+        }
+    }
+
+    .swiper-slide-active {
+        img {
+            transform: scale(1);
+        }
+
+        h3, .btn {
+            opacity: 1;
+        }
+    }
+}
+
+// medias queries
 
 @media (max-width: 1200px) {
     

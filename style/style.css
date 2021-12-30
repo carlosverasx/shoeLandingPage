@@ -41,6 +41,29 @@ body.active {
   padding-left: 30rem;
 }
 
+section {
+  padding: 5rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 5rem;
+  padding: 1.2rem 3rem;
+  border: 0.2rem solid #444;
+  cursor: pointer;
+  background: none;
+  color: #444;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  border-color: #BA0000;
+  background-color: #BA0000;
+  color: #fff;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -57,7 +80,7 @@ body.active {
 }
 
 .header .logo {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #fff;
   font-weight: bolder;
 }
@@ -87,22 +110,34 @@ body.active {
   width: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  color: #777;
+  color: #444;
   background: #fff;
   margin: 0 .3rem;
 }
 
 .header .share a:hover {
-  background: #777;
+  background: #444;
   color: #fff;
 }
 
 .header .credit {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   margin-top: 3rem;
   line-height: 1.5;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #444;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  color: #BA0000;
 }
 
 #menu-btn {
@@ -123,28 +158,6 @@ body.active {
 #menu-btn.fa-times {
   top: 1rem;
   left: 25rem;
-}
-
-section {
-  padding: 5rem 9%;
-}
-
-.btn {
-  margin-top: 1rem;
-  display: inline-block;
-  border-radius: 5rem;
-  padding: 1.2rem 3rem;
-  border: 0.2rem solid #777;
-  cursor: pointer;
-  background: none;
-  color: #777;
-  font-size: 2rem;
-}
-
-.btn:hover {
-  border-color: #BA0000;
-  background-color: #BA0000;
-  color: #fff;
 }
 
 .banner {
@@ -173,15 +186,15 @@ section {
 }
 
 .banner .content h3 {
-  font: 4rem;
-  color: #777;
+  font-size: 4rem;
+  color: #444;
   text-transform: capitalize;
   padding-top: 1rem;
 }
 
 .banner .content p {
   padding: 1rem 0;
-  font: 1.7rem;
+  font-size: 1.7rem;
   color: #666;
   line-height: 2;
   padding: 1rem 0;
@@ -195,6 +208,38 @@ section {
 
 .banner .image img {
   width: 100%;
+}
+
+.products .slide {
+  text-align: center;
+}
+
+.products .slide img {
+  height: 25rem;
+  margin: 5rem 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.products .slide h3 {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #444;
+  text-transform: capitalize;
+  opacity: 0;
+}
+
+.products .slide .btn {
+  opacity: 0;
+}
+
+.products .swiper-slide-active img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.products .swiper-slide-active h3, .products .swiper-slide-active .btn {
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {
