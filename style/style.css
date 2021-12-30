@@ -38,7 +38,7 @@ body {
 }
 
 body.active {
-  padding-left: 0;
+  padding-left: 30rem;
 }
 
 .header {
@@ -123,5 +123,105 @@ body.active {
 #menu-btn.fa-times {
   top: 1rem;
   left: 25rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 5rem;
+  padding: 1.2rem 3rem;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+  background: none;
+  color: #777;
+  font-size: 2rem;
+}
+
+.btn:hover {
+  border-color: #BA0000;
+  background-color: #BA0000;
+  color: #fff;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.banner .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.banner .content span {
+  font-size: 2.5rem;
+  color: #BA0000;
+}
+
+.banner .content h3 {
+  font: 4rem;
+  color: #777;
+  text-transform: capitalize;
+  padding-top: 1rem;
+}
+
+.banner .content p {
+  padding: 1rem 0;
+  font: 1.7rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.banner .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.banner .image img {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  body.active {
+    padding-left: 0;
+  }
+  header.active {
+    -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .banner .content h3 {
+    font-size: 3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

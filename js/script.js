@@ -6,3 +6,11 @@ menu.onclick = () => {
     header.classList.toggle('active');
     document.classList.toggle('active');
 }
+
+window.onscroll = () => {
+    if (window.innerWidth < 1200) {
+        menu.classList.remove('fa-times');
+        header.classList.remove('active');
+        document.classList.remove('active');
+    }
+}
