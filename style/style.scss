@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
 
-:root {
-    --red: #ed2d34;
-    --black: #444;
-    --white: #fff;
-    --light-color: #666;
-    --border: .2rem solid var(--black);
-}
+
+$red: #ed2d34;
+$black: #444;
+$white: #fff;
+$light-color: #666;
+$border: .2rem solid $black;
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -19,6 +18,75 @@
     transition: all .2s linear;
 }
 
-@mixin grid($val) {
+@mixin grid($grid) {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($grid, 1fr));
+    gap: 2rem;
+}
+
+@mixin flex($align) {
+    display: flex;
+    align-items: $align;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+@mixin titleText($titleSize) {
+    font: $titleSize;
+    color: $black;
+    text-transform: capitalize;
+}
+
+
+@mixin graphText($graphSize) {
+    font: $graphSize;
+    color: $light-color;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $red;
+    }
+}
+
+body {
+    background: url(/images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30rem;
+    background: $red;
+    padding: 2rem;
+    z-index: 1000;
+
+    .logo {
+        font-size: 2.5rem;
+        color: $white;
+        font-weight: bolder;
+    }
+
+    .navbar {
+
+    }
 }
