@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
 
-
-$red: #ed2d34;
-$black: #444;
+// ed3d34 BA0000
+$red: #BA0000;
+$black: #777;
 $white: #fff;
 $light-color: #666;
 $border: .2rem solid $black;
@@ -68,17 +68,25 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    &.active {
+        padding-left: 0;
+    }
 }
 
 .header {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -31rem;
     height: 100%;
     width: 30rem;
     background: $red;
     padding: 2rem;
     z-index: 1000;
+
+    &.active {
+        left: 0;
+    }
 
     .logo {
         font-size: 2.5rem;
@@ -87,6 +95,66 @@ body {
     }
 
     .navbar {
+        padding: 30% 0;
 
+        a {
+            display: block;
+            margin: 2rem 0;
+            font-size: 2rem;
+            color: $white;
+
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: .7rem;
+            }
+        }
+    }
+
+    .share {
+        text-align: center;
+
+        a {
+            height: 5rem;
+            width: 5rem;        
+            line-height: 5rem;
+            font-size: 2rem;
+            color: $black;
+            background: $white;
+            margin: 0 .3rem;
+
+            &:hover {
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+
+    .credit {
+        text-align: center;
+        font-size: 2rem;
+        color: $white;
+        margin-top: 3rem;
+        line-height: 1.5;
+    }
+}
+
+#menu-btn {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    background: $red;
+    color: $white;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 1100;
+    text-align: center;
+
+    &.fa-times {
+        top: 1rem;
+        left: 25rem
+        ;
     }
 }

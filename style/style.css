@@ -27,7 +27,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #ed2d34;
+  background: #BA0000;
 }
 
 body {
@@ -37,20 +37,91 @@ body {
   background-attachment: fixed;
 }
 
+body.active {
+  padding-left: 0;
+}
+
 .header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -31rem;
   height: 100%;
   width: 30rem;
-  background: #ed2d34;
+  background: #BA0000;
   padding: 2rem;
   z-index: 1000;
+}
+
+.header.active {
+  left: 0;
 }
 
 .header .logo {
   font-size: 2.5rem;
   color: #fff;
   font-weight: bolder;
+}
+
+.header .navbar {
+  padding: 30% 0;
+}
+
+.header .navbar a {
+  display: block;
+  margin: 2rem 0;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: .7rem;
+}
+
+.header .share {
+  text-align: center;
+}
+
+.header .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #777;
+  background: #fff;
+  margin: 0 .3rem;
+}
+
+.header .share a:hover {
+  background: #777;
+  color: #fff;
+}
+
+.header .credit {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 3rem;
+  line-height: 1.5;
+}
+
+#menu-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background: #BA0000;
+  color: #fff;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1100;
+  text-align: center;
+}
+
+#menu-btn.fa-times {
+  top: 1rem;
+  left: 25rem;
 }
 /*# sourceMappingURL=style.css.map */
