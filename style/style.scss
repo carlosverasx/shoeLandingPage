@@ -239,6 +239,8 @@ section {
             padding: 1rem 0;
             @include titleText(2.5rem);
             opacity: 0;
+            color: $black;
+            text-transform: capitalize;
         }
 
         .btn {
@@ -257,38 +259,241 @@ section {
     }
 }
 
-// medias queries
+.products-preview-container {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 1200;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
 
-@media (max-width: 1200px) {
-    
-    body.active {
-        padding-left: 0;
+    .product-preview {
+        @include flex(center);
+        background: $white;
+        padding: 9%;
+        position: relative;
+        display: none;
+
+        .fa-times {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 4rem;
+            cursor: pointer;
+            color: $light-color;
+
+            &:hover {
+                color: $red;
+                transform: rotate(90deg);
+            }
+        }
+
+        .image {
+            flex: 1 1 40rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            flex: 1 1 40rem;
+
+            h3 {
+                @include titleText(3rem);
+            }
+
+            p {
+                @include graphText(1.5rem);
+            }
+
+            .stars {
+                padding: 1rem 0;
+                font-size: 1.7rem;
+
+                i {
+                    color: $red;
+                }
+
+                span {
+                    color: $light-color;
+                }
+            }
+
+            .price{
+                @include titleText(3rem);
+                padding:1rem 0;
+             }
+        }
     }
+}
 
-    header.active {
-        box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+.service {
+    @include grid(30rem);
+
+    .box {
+        text-align: center;
+        padding: 2rem;
+
+        i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: $red;
+        }
+
+        p {
+            @include graphText(2rem)
+        }
+    }
+}
+
+.review {
+
+    .slide {
+        text-align: center;
+        padding: 2rem;
+
+        i {
+            font-size: 4rem;
+            color: $light-color;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            @include graphText(1.5rem);
+        }
+
+        img {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+            margin: 1rem 0;
+        }
+
+        h3 {
+            @include titleText(1.7rem);
+        }
+    }
+}
+
+.contact {
+
+    .row {
+        @include flex(center);
+
+        form {
+            flex: 1 1 41rem;
+
+            .box {
+                padding: 2rem 0;
+                margin-bottom: 1rem;
+                font-size: 1.6rem;
+                border-bottom: $border;
+                width: 100%;
+
+                &:focus {
+                    border-color: $red;
+                }
+            }
+
+            textarea {
+                height: 15rem;
+                resize: none;
+
+            }
+        }
+
+        .contact-info {
+            flex: 1 1 41rem;
+
+            h3 {
+                padding-bottom: 1rem;
+                @include titleText(3rem);
+            }
+
+            .graph {
+                @include graphText(1.4rem)
+            }
+
+            .icons {
+                padding: 1.5rem 0;
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+
+                i {
+                    height: 5rem;
+                    width: 5rem;
+                    line-height: 5rem;
+                    border-radius: 50px;
+                    font-size: 2rem;
+                    background: $red;
+                    color: $white;
+                    text-align: center;
+                }
+
+                p {
+                    @include graphText(1.5rem);
+                    padding: 0;
+                }
+            }
+
+            .share {
+                padding-top: 2rem;
+
+                a {
+                    font-size: 3rem;
+                    margin-right: 2rem;
+                    color: $light-color;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
     }
 
 }
 
-@media (max-width: 991px) {
+@media (max-width:1200px){
 
-    html {
-        font-size: 55%;
+    body.active{
+       padding-left: 0;
     }
-
-    section {
-        padding: 3rem 2rem;
+ 
+    header.active{
+       box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
     }
-}
-
-@media (max-width: 450px) {
-
-    html {
-        font-size: 50%;
+ 
+ }
+ 
+ @media (max-width:991px){
+ 
+    html{
+       font-size: 55%;
     }
-
-    .banner .content h3 {
-        font-size: 3rem;
+ 
+    section{
+       padding:3rem 2rem;
     }
-}
+ 
+ }
+ 
+ @media (max-width:450px){
+ 
+    html{
+       font-size: 50%;
+    }
+ 
+    .banner .content h3{
+       font-size: 3rem;
+    }
+ 
+    .products .slide img{
+       height: 15rem;
+    }
+ 
+ }
